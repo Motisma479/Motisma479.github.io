@@ -1,0 +1,22 @@
+header
+{
+	color: red;
+	text-align: left;
+}
+
+body
+{
+	color: lime;
+	text-align: center;
+}
+body:hover
+{
+	color: green;
+	text-align: center;
+}
+
+footer
+{
+	color: blue;
+	text-align: right;
+}
