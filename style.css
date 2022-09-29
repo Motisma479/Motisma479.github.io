@@ -3,15 +3,15 @@ header
 	color: red;
 	text-align: left;
 }
+.nav
+{
+	position: fixed;
+	background: black;
+}
 
-body
+main
 {
 	color: lime;
-	text-align: center;
-}
-body:hover
-{
-	color: green;
 	text-align: center;
 }
 
