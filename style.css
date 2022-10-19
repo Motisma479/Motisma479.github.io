@@ -8,6 +8,34 @@ header
 	color: red;
 	text-align: left;
 }
+.navButtons
+{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-245%);
+}
+.nav .navButtons
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.navButtons a
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	padding: 14px 34px;
+	background: #e74c3c;
+	font-family: calibri;
+	text-align: center;
+	border-radius: 25px;
+}
 .nav
 {
 	position: fixed;
