@@ -27,6 +27,12 @@ header
 {
 	text-decoration: underline;
 }
+
+.navigation
+{
+	background: #AA8ED6;
+	width: 100% !important;
+}
 .navigation h1
 {
 	text-align: center;
@@ -36,26 +42,32 @@ header
 	color:#ffffff;
 	text-shadow: 2px 2px 2px #e0e0e0;
 }
-.navigation
-{
-	background: #604476;
-	width: 100% !important;
-}
+
 .nav
 {
 	position: fixed;
-	background: black;
-	width: 100% !important;
+	z-index: 11;
 }
 
 main
 {
 	color: lime;
 	text-align: center;
+	background-image: url(background.jpg);
+	background-attachment: fixed;
+}
+.mainBlock
+{
+	background: black;
+	width: 80%;
+	margin-left : 10%;
+	position: relative;
+	z-index: 10;
 }
 
 footer
 {
 	color: blue;
-	text-align: right;
+	background: #AA8ED6;
+	width: 100% !important;
 }
