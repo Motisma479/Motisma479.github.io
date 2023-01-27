@@ -7,6 +7,24 @@ header
 {
 	text-align: left;
 }
+main
+{
+	color: lime;
+	text-align: center;
+	background-color:hsl(195, 100%, 7%);
+	background-attachment: fixed;
+}
+footer
+{
+	color: blue;
+	background: #AA8ED6;
+	width: 100% !important;
+	
+	border-top: 4px solid #bad68e;
+	
+	z-index: 2;
+	position: relative;
+}
 
 .navButtons
 {
@@ -32,6 +50,12 @@ header
 {
 	background: #AA8ED6;
 	width: 100% !important;
+	
+	//border-bottom:#331e3f;
+	border-bottom: 4px solid #bad68e;
+	
+	z-index: 2;
+	position: relative;
 }
 .navigation h1
 {
@@ -49,25 +73,28 @@ header
 	z-index: 11;
 }
 
-main
-{
-	color: lime;
-	text-align: center;
-	background-image: url(background.jpg);
-	background-attachment: fixed;
+
+#canvas{
+	
+    margin:0 auto;
+    display:block;
+    filter:url('#shadowed-goo');
+	z-index: 1;
+	position: fixed;
+}
+
+svg{
+  display:none;
 }
 .mainBlock
 {
-	background: black;
+	background: #686868;
 	width: 80%;
 	margin-left : 10%;
 	position: relative;
 	z-index: 10;
+	
+	border-right: 4px solid #585858;
+	border-left: 4px solid #585858;
 }
 
-footer
-{
-	color: blue;
-	background: #AA8ED6;
-	width: 100% !important;
-}
