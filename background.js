@@ -1,6 +1,7 @@
 const TWO_PI = Math.PI * 2;
 
-class Application {
+class Application
+{
 	constructor() {
 		this.canvas = document.getElementById("canvas");
 		this.context = this.canvas.getContext("2d");
@@ -88,10 +89,9 @@ class Application {
 	}
 }
 
-/**
- * CircleContainer Class
- */
-class CircleContainer {
+
+class CircleContainer
+{
 	/**
 	 * CircleContainer constructor
 	 * @param context - The context from the canvas object of the Application
@@ -141,10 +141,8 @@ class CircleContainer {
 	}
 }
 
-/**
- * Circle Class
- */
-class Circle {
+class Circle
+{
 	/**
 	 * Circle constructor
 	 * @param x - The horizontal position of this circle
