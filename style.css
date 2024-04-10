@@ -2,7 +2,6 @@
 {
 	margin: 0;
 	padding: 0;
-
 	font-family: calibri;
 	text-decoration: none;
 	list-style: none;
@@ -12,9 +11,7 @@ header
 {
 	background: #AA8ED6;
 	width: 100% !important;
-	
 	box-shadow: 0px 5px 5px #18181b;
-	
 	position: relative;
 	text-align: left;
 }
@@ -71,19 +68,18 @@ footer a:hover
 	cursor: pointer;
 	transition: .2s linear;
 }
-
 .menuIcon:hover
 {
 	opacity: .9;
 	transform: scale(1.1);
 }
-
 .menuIcon.active
 {
 	
 	background: #f1f1f1;
 	color : #331d3d;
 }
+
 
 .navButtons
 {
@@ -98,31 +94,29 @@ footer a:hover
 	align-items: center;
 	justify-content: center;
 	transition: .6s;
+
+	text-align: center;
+	
 	/* transform: translateX(100%); */
 }
-
 .navButtons.active
 {
 	right: 0;
 }
-
 .navButtons nav
 {
 	display: grid;
 }
-
 .navButtons li
 {
 	margin: 20px 0;
 	overflow: hidden;
 }
-
 .navButtons li:hover
 {
 	transition: .2s linear;
 	transform: scale(1.2);
 }
-
 .navButtons a
 {
 	color: white;
@@ -131,7 +125,6 @@ footer a:hover
 	position: relative;
 	transition: .2s linear;
 }
-
 .navButtons a:hover
 {
 	color: #AA8ED6;
@@ -139,29 +132,43 @@ footer a:hover
 }
 
 
-
 .navigation
 {
 	background: #AA8ED6;
-	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 14px 20px;
 	margin: auto;
 	width: 100% !important;
-	
-	box-shadow: 0px 5px 5px #18181b;
-	
 }
-
 .navigation.nav
 {
 	position: fixed;
-	z-index: 50;
+	z-index: 10;
+	box-shadow: 0px 5px 5px #18181b;
+	padding: 19.5px 20px;/* important to compansate the icon */
 }
 
-.navigation.active.nav
+
+.IconOnNav
+{
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	padding: 14px 20px;
+	margin: auto;
+	width: 100% !important;
+	position: fixed;
+	z-index: 200;
+}
+/* .IconOnNav.navButtons
+{
+
+} */
+
+
+/* .navigation.active.nav
 {
 	background: #00000000;
 	box-shadow: 0px 0px 0px #00000000;
@@ -175,7 +182,7 @@ footer a:hover
 	background: #AA8ED6;
 	border-radius: 10px;
 	transition: .2s linear;
-}
+} */
 
 
 /* .navigation h1
