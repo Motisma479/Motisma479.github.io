@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Template",
+        "url": "https://github.com/Motisma479/GOL",
+        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "description": "Description of the template"
+    },
+    {
+        "name": "Template",
+        "url": "https://github.com/Motisma479/GOL",
+        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "description": "Description of the template"
+    },
+    {
+        "name": "Template",
+        "url": "https://github.com/Motisma479/GOL",
+        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "description": "Description of the template"
+    },
+    {
+        "name": "Template",
+        "url": "https://github.com/Motisma479/GOL",
+        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "description": "Description of the template"
+    },
+    {
+        "name": "Template",
+        "url": "https://github.com/Motisma479/GOL",
+        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "description": "Description of the template"
+    }
+]

@@ -22,7 +22,7 @@ main
 
 	color: lime;
 	text-align: center;
-	background-color:#313338;
+	background-color:#303338;
 	background-attachment: fixed;
 }
 /* -------------- FOOTER -------------- */
@@ -195,9 +195,6 @@ footer a:hover
 	
 } */
 
-
-
-
 .mainBlock
 {
 	background: #686868;
@@ -213,4 +210,160 @@ footer a:hover
 .network
 {
 	font-size: 25px;
+}
+
+.projectBlock
+{
+	
+	background: #232428;
+	max-width: 920px;
+	margin: 0 auto;
+	
+	/* margin-left : 10%; */
+	/* position: relative; */
+	/* z-index: 10; */
+	border-radius: 25px;
+	color: #f3edd6;
+}
+.projectTitle
+{
+	font-size: 30px;
+	text-align: center;
+} 
+.projectBlock img
+{
+	margin-top: 25px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.LanguagesBlock
+{
+	text-align: left !important;
+	/* display: table-row; */
+	/* box-sizing: border-box; */
+	
+	padding: 16px;
+	/* padding-top: 16px;
+	padding-bottom: 16px; */
+
+	width: 100%;
+
+	border-radius: 25px;
+	background-color: #0d1116;;
+}
+
+.LanguagesTitle
+{
+	font-weight: 600 !important;
+	color: #e6edf3;
+
+	font-size: 20px !important;
+	margin-bottom: 16px !important;
+	margin-top: 0;
+
+	/* display: block; */
+	/* margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+}
+
+.LanguagesBar
+{
+	display: block;
+	margin-bottom: 8px !important;
+}
+
+.LanguagesList
+{
+    list-style: none !important;
+
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	/* display: block;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px; */
+}
+
+.LanguagesList li
+{
+    display: inline !important;
+	text-align: -webkit-match-parent;
+	
+}
+
+.Language
+{
+	display: inline-flex !important;
+	margin-right: 16px !important;
+	align-items: center !important;
+	flex-wrap: nowrap !important;
+}
+
+.LanguageDot
+{
+    margin-right: 8px !important;
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+}
+
+.LanguageName
+{
+	font-weight: 600 !important;
+	margin-right: 4px !important;
+	color: #e6edf3 !important;
+}
+
+.LanguagePercentage
+{
+	color: #848d97 !important;
+	font-size: 12px !important;
+}
+
+
+
+.Progress {
+    border-radius: 6px;
+    display: flex;
+    height: 8px;
+    outline: 1px solid #0000;
+    overflow: hidden;
+}
+.Progress-item {
+	outline: 2px solid #0000;
+}
+.Progress-item+.Progress-item {
+	margin-left: 2px;
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+.projectDescription
+{
+	text-align: left;
+}
+
+.projectDescriptionButton
+{
+	height: 30px;
+	text-align: center;
+	line-height: 39px;
+	font-size: 25px;
+	margin-top: 4px;
+	margin-bottom: 16px;
+}
+
+.projectDescriptionButton:hover
+{
+	background-color: #0e001f;
+	border-radius: 0px 0px 30px 30px;
 }
