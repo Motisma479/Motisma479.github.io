@@ -1,32 +1,20 @@
 [
     {
-        "name": "Github.io",
-        "url": "https://github.com/Motisma479/Motisma479.github.io",
-        "preview": ["background.jpg"],
-        "description": "This is the pages of the github.io you are on."
+        "name": "Ogma",
+        "url": "https://github.com/Motisma479/Ogma",
+        "preview": ["Assets/ScreenShots/Ogma_1.png"],
+        "description": "Ogma is a software that allows you to create and edit entry to manage an archive or library."
     },
     {
-        "name": "Template2",
-        "url": "https://github.com/Motisma479/GOL",
-        "preview": ["background.jpg", "background2.jpg"],
-        "description": "Description of the template"
+        "name": "VTest",
+        "url": "https://github.com/Motisma479/VTest",
+        "preview": ["Assets/ScreenShots/VTest_1.png"],
+        "description": "A library to create Unit Tests for C++."
     },
     {
-        "name": "Template3",
+        "name": "Game Of Life",
         "url": "https://github.com/Motisma479/GOL",
-        "preview": ["background.jpg", "background2.jpg"],
-        "description": "Description of the template"
-    },
-    {
-        "name": "Template4",
-        "url": "https://github.com/Motisma479/GOL",
-        "preview": ["background.jpg", "background2.jpg"],
-        "description": "Description of the template"
-    },
-    {
-        "name": "Template5",
-        "url": "https://github.com/Motisma479/GOL",
-        "preview": ["background.jpg", "background2.jpg"],
-        "description": "Description of the template"
+        "preview": ["Assets/ScreenShots/GOL_1.png", "Assets/ScreenShots/GOL_2.png"],
+        "description": "A Game of Life written in many languages on different platforms."
     }
 ]

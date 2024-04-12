@@ -351,6 +351,9 @@ footer a:hover
 .projectDescription
 {
 	text-align: left;
+
+	padding: 16px;
+	background-color: #18191C;
 }
 
 .projectDescriptionButton
