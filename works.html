@@ -7,6 +7,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
+	<script src="menuIcon.js"></script>
+	<script src="projectParser.js"></script>
+
 	<link rel="stylesheet" href="style.css">
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -36,11 +39,22 @@
 	</div>
 
 	<main>	
-		<div class="projectBlock">
-			<img src="background.jpg",
-				width="100%",
-				height="80%"
-			/>
+		
+		<!-- 
+			Project Block used in ProjectParser.js 
+			this one is used for testing.
+		-->
+		<div class="projectBlock" hidden>
+			
+			<div class ="projectPreview">
+				<div class="previousImage imageButton" id="-1" btndir="-1"><i class="fi fi-rr-angle-left"></i></div>
+        		<div class="nextImage imageButton" id="-1" btndir="1"><i class="fi fi-rr-angle-right"></i></div>
+        		<p id="-1" class="numberImage">01/10</p>
+				<div>
+					<img id="-1" class="preview" src="background.jpg", width="100%", height="100%" imageArray="background.jpg,background2.jpg,background2.jpg,background2.jpg,background2.jpg,background2.jpg,background2.jpg,background2.jpg,background2.jpg,background2.jpg" position="0"/>
+					<img id="-1" class="newImage" src="background2.jpg" />
+				</div>
+			</div>
 
 			<table style="width: 95%; margin: 0px auto; margin-bottom: 5px;">
 				<th style="width: 50%;">
@@ -51,15 +65,15 @@
 						<h2 class="LanguagesTitle">Languages</h2>
 						<div class="LanguagesBar">
 							<span data-view-component="true" class="Progress">
-								<span style="background-color:#e34c26 !important;;width: 64.8%;" itemprop="keywords" aria-label="HTML 64.8" data-view-component="true" class="Progress-item"></span>
-								<span style="background-color:#f1e05a !important;;width: 22.6%;" itemprop="keywords" aria-label="JavaScript 22.6" data-view-component="true" class="Progress-item"></span>
-								<span style="background-color:#563d7c !important;;width: 12.6%;" itemprop="keywords" aria-label="CSS 12.6" data-view-component="true" class="Progress-item"></span>
+								<span style="background-color:#e34c26 !important;;width: 64.8%;" class="Progress-item"></span>
+								<span style="background-color:#f1e05a !important;;width: 22.6%;" class="Progress-item"></span>
+								<span style="background-color:#563d7c !important;;width: 12.6%;" class="Progress-item"></span>
 							</span>
 						</div>
 						<ul class = "LanguagesList">
 							<li>
 								<a class="Language">
-									<svg style="color:#e34c26;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="LanguageDot">
+									<svg style="color:#e34c26;"  height="16" width="16"  class="LanguageDot">
 										<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
 									</svg>
 									<span class="LanguageName">HTML</span>
@@ -68,7 +82,7 @@
 							</li>
 							<li>
 								<a class="Language">
-									<svg style="color:#f1e05a;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="LanguageDot">
+									<svg style="color:#f1e05a;" height="16" width="16"  class="LanguageDot">
 										<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
 									</svg>
 									<span class="LanguageName">JavaScript</span>
@@ -77,7 +91,7 @@
 							</li>
 							<li>
 								<a class="Language">
-									<svg style="color:#563d7c;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="LanguageDot">
+									<svg style="color:#563d7c;" height="16" width="16"  class="LanguageDot">
 										<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
 									</svg>
 									<span class="LanguageName">CSS</span>
@@ -89,87 +103,16 @@
 				</th>
 			</table>
 			
-			<div id="1" class="projectDescription" hidden>
+			<div id="-1" class="projectDescription" hidden>
 				<p>A Description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 
-			<div id="1" class="projectDescriptionButton" >
+			<div id="-1" class="projectDescriptionButton" >
 				<i class="fi fi-rr-menu-dots"></i>
 			</div>
 
 		</div>
 
-		<div class="projectBlock">
-			<img src="background.jpg",
-				width="100%",
-				height="80%"
-			/>
-
-			<table style="width: 95%; margin: 0px auto; margin-bottom: 5px;">
-				<th style="width: 50%;">
-					<h2 class="projectTitle">Template</h2>
-				</th>
-				<th>
-					<div class="LanguagesBlock">
-						<h2 class="LanguagesTitle">Languages</h2>
-						<div class="LanguagesBar">
-							<span data-view-component="true" class="Progress">
-								<span style="background-color:#e34c26 !important;;width: 64.8%;" itemprop="keywords" aria-label="HTML 64.8" data-view-component="true" class="Progress-item"></span>
-								<span style="background-color:#f1e05a !important;;width: 22.6%;" itemprop="keywords" aria-label="JavaScript 22.6" data-view-component="true" class="Progress-item"></span>
-								<span style="background-color:#563d7c !important;;width: 12.6%;" itemprop="keywords" aria-label="CSS 12.6" data-view-component="true" class="Progress-item"></span>
-							</span>
-						</div>
-						<ul class = "LanguagesList">
-							<li>
-								<a class="Language">
-									<svg style="color:#e34c26;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="LanguageDot">
-										<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
-									</svg>
-									<span class="LanguageName">HTML</span>
-									<span class="LanguagePercentage">64.8%</span>
-								</a>
-							</li>
-							<li>
-								<a class="Language">
-									<svg style="color:#f1e05a;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="LanguageDot">
-										<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
-									</svg>
-									<span class="LanguageName">JavaScript</span>
-									<span class="LanguagePercentage">22.6%</span>
-								</a>
-							</li>
-							<li>
-								<a class="Language">
-									<svg style="color:#563d7c;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="LanguageDot">
-										<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
-									</svg>
-									<span class="LanguageName">CSS</span>
-									<span class="LanguagePercentage">12.6%</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</th>
-			</table>
-			
-			<div id="2" class="projectDescription" hidden>
-				<p>A Description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div id="2" class="projectDescriptionButton" >
-				<i class="fi fi-rr-menu-dots"></i>
-			</div>
-
-		</div>
-
-
-		<!-- <div class="mainBlock"> -->
-			<!-- <a>Works !</br>
-			<a>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !
-			</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !
-			</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !</br>Hello World !
-			</a> -->
-		<!-- </div> -->
 	</main>
 	
 	<!-- Footer -->
@@ -181,93 +124,3 @@
 
 </body>
 </html>
-<!-- 
-<script type="text/javascript"/>
-	var nav = document.getElementsByClassName("navigation");
-	var menuIcon = document.getElementsByClassName("menuIcon");
-	var IconOnNav = document.getElementsByClassName("IconOnNav");
-
-	window.onscroll = function sticky(){
-		if(window.pageYOffset > nav[0].offsetTop)
-		{
-			nav[0].classList.add("nav");
-
-			IconOnNav[0].appendChild(menuIcon[0]);
-		}
-		else
-		{
-			nav[0].classList.remove("nav");
-			nav[0].appendChild(menuIcon[0]);
-
-		}
-	}
-</script> -->
-
-<script>
-	$(".menuIcon").click(function(){
-		$(this).toggleClass("active");
-		$(".navButtons").toggleClass("active");
-		$(".navigation").toggleClass("active");
-		$(".menuIcon i").toggleClass("fi-rr-menu-burger fi-rr-cross-small");
-	});
-</script>
-
-<script>
-	$(".projectDescriptionButton").click(function(){
-		var id = $(this).attr('id'); // Get the ID of the clicked button
-   		$("#" + id + ".projectDescription").toggle(100); // Toggle the element with the corresponding ID
-	});
-</script>
-
-<script>
-	$(document).ready(function() {
-		// Your script here
-		for(var i = 0; i < 6; i++)
-		{
-			$("main").append("Your text here </br>");
-		}
-
-		$("main").append("<div class= \"projectBlock\">");
-		$("main").append("</div>");
-
-		var projects; // Variable to store the JSON data
-
-		$.ajax({
-			url: 'projects.json',
-			dataType: 'json',
-			async: false, // Make the request synchronous
-			success: function(data) {
-				projects = data;
-			}
-		});
-
-		console.log(projects);
-	});
-</script>
-<!-- <script type="text/javascript"/>
-	var nav = document.getElementsByClassName("navigation");
-	var menuIcon = document.getElementsByClassName("menuIcon");
-	var IconOnNav = document.getElementsByClassName("IconOnNav");
-
-	window.onscroll = function sticky(){
-		if(window.pageYOffset > nav[0].offsetTop)
-		{
-			nav[0].classList.add("nav");
-
-			IconOnNav[0].appendChild(menuIcon[0]);
-		}
-		else
-		{
-			nav[0].classList.remove("nav");
-			nav[0].appendChild(menuIcon[0]);
-
-		}
-	}
-</script> -->
-
-<!-- <script>
-	$(".projectBlock h2").click(function(){
-		$(".target-div").load("https://github.com/Motisma479/Motisma479.github.io #nth-child(6)");
-	});
-</script> -->
-<!-- document.querySelector("#repo-content-pjax-container > div > div > div.Layout.Layout--flowRow-until-md.react-repos-overview-margin.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div:nth-child(6)") -->

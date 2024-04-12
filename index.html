@@ -7,6 +7,8 @@
 
 	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
+	<script src="menuIcon.js"></script>
+
 	<link rel="stylesheet" href="style.css">
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -55,33 +57,3 @@
 
 </body>
 </html>
-
-<script type="text/javascript"/>
-	var nav = document.getElementsByClassName("navigation");
-	var menuIcon = document.getElementsByClassName("menuIcon");
-	var IconOnNav = document.getElementsByClassName("IconOnNav");
-
-	window.onscroll = function sticky(){
-		if(window.pageYOffset > nav[0].offsetTop)
-		{
-			nav[0].classList.add("nav");
-
-			IconOnNav[0].appendChild(menuIcon[0]);
-		}
-		else
-		{
-			nav[0].classList.remove("nav");
-			nav[0].appendChild(menuIcon[0]);
-
-		}
-	}
-</script>
-
-<script>
-	$(".menuIcon").click(function(){
-		$(this).toggleClass("active");
-		$(".navButtons").toggleClass("active");
-		$(".navigation").toggleClass("active");
-		$(".menuIcon i").toggleClass("fi-rr-menu-burger fi-rr-cross-small");
-	});
-</script>

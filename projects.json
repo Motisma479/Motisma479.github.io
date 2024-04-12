@@ -1,32 +1,32 @@
 [
     {
-        "name": "Template",
+        "name": "Github.io",
+        "url": "https://github.com/Motisma479/Motisma479.github.io",
+        "preview": ["background.jpg"],
+        "description": "This is the pages of the github.io you are on."
+    },
+    {
+        "name": "Template2",
         "url": "https://github.com/Motisma479/GOL",
-        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "preview": ["background.jpg", "background2.jpg"],
         "description": "Description of the template"
     },
     {
-        "name": "Template",
+        "name": "Template3",
         "url": "https://github.com/Motisma479/GOL",
-        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "preview": ["background.jpg", "background2.jpg"],
         "description": "Description of the template"
     },
     {
-        "name": "Template",
+        "name": "Template4",
         "url": "https://github.com/Motisma479/GOL",
-        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "preview": ["background.jpg", "background2.jpg"],
         "description": "Description of the template"
     },
     {
-        "name": "Template",
+        "name": "Template5",
         "url": "https://github.com/Motisma479/GOL",
-        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
-        "description": "Description of the template"
-    },
-    {
-        "name": "Template",
-        "url": "https://github.com/Motisma479/GOL",
-        "preview": ["path/to/preview_1.png", "path/to/preview_2.png"],
+        "preview": ["background.jpg", "background2.jpg"],
         "description": "Description of the template"
     }
 ]
