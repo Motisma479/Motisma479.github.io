@@ -65,7 +65,7 @@ function formatNumberWithLeadingZero(number, maxNumber) {
 
 $(document).ready(function() {
     $.ajax({
-        url: 'colors.json',
+        url: 'data/colors.json',
         dataType: 'json',
         async: false, // Make the request synchronous
         success: function(data) {
@@ -76,7 +76,7 @@ $(document).ready(function() {
     var projects; // Variable to store the JSON data
 
     $.ajax({
-    	url: 'projects.json',
+    	url: 'data/projects.json',
     	dataType: 'json',
     	async: false, // Make the request synchronous
     	success: function(data) {

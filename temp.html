@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Vertical Line Between Divs</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+}
+
+.container {
+  position: relative;
+  width: 300px; /* Adjust the width of the container to fit the layout */
+  height: 100vh; /* Full height for the container */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.line {
+  width: 4px;
+  position: absolute;
+  left: 150px; /* Centered between the two boxes */
+  background-color: black;
+  top: calc(101px + 100px); /* Start below the first box */
+  height: calc(300px - 50px - 100px); /* Dynamic height calculation */
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" style="top: 100px; left: 100px;">Div 1</div>
+    <div class="box" style="top: 600px; left: 100px;">Div 2</div>
+    <div class="line"></div>
+  </div>
+</body>
+</html>

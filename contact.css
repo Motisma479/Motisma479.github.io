@@ -1,0 +1,66 @@
+main
+{
+    height: 100vh;
+}
+
+.contactBlock
+{
+    text-align: center;
+    color: white;
+
+    background-color: #AA8ED6;
+    width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactBlock h1
+{
+    border-bottom: solid 2px #ffffff;
+
+    width: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+}
+
+.contactIcon
+{
+    margin-top: 3%;
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+
+.contactIcon i
+{
+    transition: .2s linear;
+    color: white;
+}
+
+.contactIcon i:hover
+{
+    font-size: 35px;
+}
+
+.contactButton
+{
+    background-color:  #7a54b9;
+    color: white;
+
+    border: solid 2px #ffffff;
+    border-radius: 30px;
+    margin: 3%;
+    padding: 2%;
+    font-size: 20px;
+    font-weight: 600;
+    
+    transition: .2s linear;
+}
+
+.contactButton:hover
+{
+    background-color:  #9b70e0;
+    transform: scale(1.1);
+}
