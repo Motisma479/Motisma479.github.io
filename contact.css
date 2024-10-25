@@ -1,6 +1,8 @@
 main
 {
-    height: 100vh;
+    height: calc(100vh - 79px - 96.6px);
+    display: flex;
+    align-items: center;
 }
 
 .contactBlock
@@ -9,10 +11,32 @@ main
     color: white;
 
     background-color: #AA8ED6;
-    width: 600px;
+    width: 35%;
 
     margin-left: auto;
     margin-right: auto;
+
+    border-radius: 10px;
+    /* margin-bottom: auto; */
+}
+
+.contactImage
+{
+    width: 50%;
+    border-radius: 50%;
+    margin-top: 3%;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    /* -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; */
 }
 
 .contactBlock h1
@@ -30,18 +54,21 @@ main
 {
     margin-top: 3%;
     font-size: 30px;
-    letter-spacing: 20px;
+    /* letter-spacing: 20px; */
 }
 
-.contactIcon i
+.contactIcon a
 {
     transition: .2s linear;
     color: white;
+    margin-right: 5%;
+    margin-left: 5%;
+    display: inline-block;
 }
 
-.contactIcon i:hover
+.contactIcon a:hover
 {
-    font-size: 35px;
+    transform: scale(1.2);
 }
 
 .contactButton
