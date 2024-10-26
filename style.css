@@ -1,3 +1,9 @@
+html
+{
+	/* scroll-behavior: smooth; */
+	background-color: #2b2d31;
+}
+
 *
 {
 	margin: 0;
@@ -15,13 +21,15 @@ header
 }
 main
 {
-	padding-top: 10px;
 	padding-bottom: 10px;
-
+	padding-top: 10px;
+	
 	color: lime;
 	text-align: center;
 	background-color:#303338;
 	background-attachment: fixed;
+
+	min-height: calc(100vh - 79px - 96.6px);
 }
 /* -------------- FOOTER -------------- */
 footer
@@ -135,15 +143,39 @@ footer a:hover
 	background: #AA8ED6;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	/* padding: 14px 20px; */
 	margin: auto;
 	width: 100% !important;
 	
-		position: fixed;
-		z-index: 10;
-		box-shadow: 0px 5px 5px #18181b;
-		padding: 19.5px 20px;/* important to compansate the icon */
+	position: fixed;
+	z-index: 10;
+	box-shadow: 0px 5px 5px #18181b;
+	padding: 0px 20px;/* important to compansate the icon */
+	height: 78.2px;
+}
+
+.NavText
+{
+	margin-left: 10px;
+}
+
+.NavText h1
+{
+	margin-bottom: -8px;
+}
+
+.NavText h2
+{
+	margin-top: -8px;
+	opacity: 60%;
+}
+
+.NavIcon
+{
+	height: 90%;
+	border-radius: 50%;
+	/* display: flex; */
 }
 
 
