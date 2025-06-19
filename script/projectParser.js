@@ -13,9 +13,9 @@ function LinkToAPI(url) {
     return apiURL;
 }
 
-function GetLanguagesList(apiURL) {
-    const response = fetch(`https://get-repo-data.robion-mathieu-16.workers.dev/?repolink=${apiURL}`);
-    const languages = response.json();
+async function GetLanguagesList(apiURL) {
+    const response = await fetch(`https://get-repo-data.robion-mathieu-16.workers.dev/?repolink=${apiURL}`);
+    const languages = await response.json();
 
 
     var languagesList = [];
