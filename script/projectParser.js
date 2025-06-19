@@ -16,14 +16,10 @@ function LinkToAPI(url) {
 function GetLanguagesList(apiURL) {
     var languages
 
-    $.ajax({
-        url: apiURL,
-        dataType: 'json',
-        async: false, // Make the request synchronous
-        success: function(data) {
-            languages = data;
-        }
-    });
+    const response = fetch("https://get-repo-data.robion-mathieu-16.workers.dev/?repolink=${apiURL}");
+    const languages = response.json();
+
+
     var languagesList = [];
     var totalLanguages = Object.values(languages).reduce((a, b) => a + b, 0);
     var totalLanguagesRounded = 0;
