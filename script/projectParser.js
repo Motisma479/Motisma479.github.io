@@ -13,10 +13,18 @@ function LinkToAPI(url) {
     return apiURL;
 }
 
-async function GetLanguagesList(apiURL) {
-    const response = await fetch(`https://get-repo-data.robion-mathieu-16.workers.dev/?repolink=${apiURL}`);
-    const languages = await response.json();
+function GetLanguagesList(apiURL) {
 
+    var languages
+
+    $.ajax({
+        url: `https://get-repo-data.robion-mathieu-16.workers.dev/?repolink=${apiURL}`,
+        dataType: 'json',
+        async: false, // Make the request synchronous
+        success: function(data) {
+            languages = data;
+        }
+    });
 
     var languagesList = [];
     var totalLanguages = Object.values(languages).reduce((a, b) => a + b, 0);
