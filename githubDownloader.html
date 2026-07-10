@@ -23,7 +23,13 @@
 <script>
     const params = new URLSearchParams(window.location.search);
     const fileToDownload = params.get("file");
-
+    
+    const a = document.createElement("a");
+    a.href = fileToDownload;
+    a.download;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
 
     console.log(fileToDownload);
     
