@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Motisma479</title>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+	<link rel="icon" href="Assets/icon_128_128.png" sizes="128x128">
+	<link rel="icon" href="Assets/icon_64_64.png" sizes="64x64">
+	<link rel="icon" href="Assets/icon_32_32.png" sizes="32x32">
+	<link rel="icon" href="Assets/icon_16_16.png" sizes="16x16">
+</head>
+<body style="background-color:#AA8ED6;">
+	
+	<main>	
+		Youre download started. going back where you where...
+	</main>
+	
+</body>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const fileToDownload = params.get("file");
+
+
+    console.log(fileToDownload);
+    
+    
+</script>
+
+</html>
