@@ -49,13 +49,7 @@
 
 	<main>
 		<div class="contactBlock">
-			<img class="contactImage" src="https://avatars.githubusercontent.com/u/74106176?v=4"/>
-			<h1>Mathieu Robion</h1>
-			<div class="contactIcon">
-				<a href="https://www.linkedin.com/in/mathieu-robion-128416266/"><i class="fi fi-brands-linkedin"></i></a>
-				<a href="https://github.com/Motisma479"><i class="fi fi-brands-github"></i></a>
-				<a href="discord://-/users/481963313433935888"><i class="fi fi-brands-discord"></i></a>
-			</div>
+			<h1>Youre download started. going back where you where...</h1>
 
 			<div class="contactButton">
 				<a href="mailto:robion.mathieu.16@gmail.com">Contact me</a>
@@ -71,6 +65,22 @@
 		<p class="network"><a href="https://www.linkedin.com/in/mathieu-robion-128416266/"><i class="fi fi-brands-linkedin"></i>Mathieu Robion</a></p>
 		Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
 	</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const fileToDownload = params.get("file");
+    
+    const a = document.createElement("a");
+    a.href = fileToDownload;
+    a.download = "";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    console.log(fileToDownload);
+    
+    
+</script>
 
 </body>
 </html>
