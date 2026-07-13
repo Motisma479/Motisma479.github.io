@@ -5,12 +5,6 @@
 	<meta charset="utf-8">
 	<title>Motisma479</title>
 
-	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-
-	<script src="script/menuIcon.js"></script>
-
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="contact.css">
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
@@ -19,68 +13,79 @@
 	<link rel="icon" href="Assets/icon_32_32.png" sizes="32x32">
 	<link rel="icon" href="Assets/icon_16_16.png" sizes="16x16">
 </head>
-<body>
-	<!-- Header -->
-	<header>
-		
-		<div class="navigation">
-			<img class="NavIcon" src="https://avatars.githubusercontent.com/u/74106176?v=4"/>
-			<div class="NavText">
-				<h1>Mathieu Robion</h1>
-				<h2>Motisma479</h2>
-			</div>
-		</div>
-		<div class="IconOnNav">
-			<div class="menuIcon">
-				<i class="fi fi-rr-menu-burger"></i>
-			</div>
-		</div>
+<style>	
+	html
+	{
+		background-color: #2b2d31;
+	}
 
-	</header>
-	
-	<div class="navButtons">
-		<nav>
-			<li><a href="https://Motisma479.github.io">Home</a></li>
-			<li><a href="about">About</a></li>
-			<li><a href="works">Works</a></li>
-			<li><a href="#">Contact</a></li>
-		</nav>
-	</div>
+	*
+	{
+		margin: 0;
+		padding: 0;
+		font-family: calibri;
+		text-decoration: none;
+		list-style: none;
+		box-sizing: border-box;
+	}
+
+	main
+	{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		height: 100vh;
+	}
+
+	.block
+	{
+		text-align: center;
+		color: white;
+
+		background-color: #AA8ED6;
+		width: 35%;
+
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+
+		border-radius: 10px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+</style>
+<body>
 
 	<main>
-		<div class="contactBlock">
+		<div class="block">
 			<h1>Youre download started. going back where you where...</h1>
-
-			<div class="contactButton">
-				<a href="mailto:robion.mathieu.16@gmail.com">Contact me</a>
-			</div>
-			
 		</div>
-
 	</main>
 	
-	<!-- Footer -->
-	<footer>
-		<p class="network"><a href="https://github.com/Motisma479"><i class="fi fi-brands-github"></i>Motisma479</a></p>
-		<p class="network"><a href="https://www.linkedin.com/in/mathieu-robion-128416266/"><i class="fi fi-brands-linkedin"></i>Mathieu Robion</a></p>
-		Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
-	</footer>
-
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const fileToDownload = params.get("file");
-    
-    const a = document.createElement("a");
-    a.href = fileToDownload;
-    a.download = "";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-
-    console.log(fileToDownload);
-    
-    
-</script>
-
 </body>
+<script>
+	async function downloadFile(url)
+	{
+		const filename = url.split("/").pop();
+		const response = await fetch(url);
+		const blob = await response.blob();
+		
+		const link = document.createElement("a");
+		link.href = URL.createObjectURL(blob);
+		link.download = filename;
+		document.body.appendChild(link);
+		 link.click();
+		link.remove();
+		URL.revokeObjectURL(link.href);
+
+		setTimeout(() => history.back(), 1000);
+	}
+	const params = new URLSearchParams(window.location.search);
+	const fileToDownload = params.get("file");
+	console.log(fileToDownload);
+	
+	downloadFile(fileToDownload)
+
+</script>
 </html>
