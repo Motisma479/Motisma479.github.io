@@ -5,49 +5,6 @@ $(document).on("click", ".projectDescriptionButton", function(){
 
 var colors;
 
-function LinkToAPI(url) {
-    // Extract the repository path from the input URL
-    var repoPath = url.split("github.com/")[1];
-    // Construct the GitHub API URL for the languages endpoint
-    var apiURL = "https://api.github.com/repos/" + repoPath + "/languages";
-    return apiURL;
-}
-
-function GetLanguagesList(apiURL) {
-
-    var languages
-
-    $.ajax({
-        url: `https://get-repo-data.robion-mathieu-16.workers.dev/?repolink=${apiURL}`,
-        dataType: 'json',
-        async: false, // Make the request synchronous
-        success: function(data) {
-            languages = data;
-        }
-    });
-
-    var languagesList = [];
-    var totalLanguages = Object.values(languages).reduce((a, b) => a + b, 0);
-    var totalLanguagesRounded = 0;
-
-    Object.keys(languages).forEach(function(key) {
-        var language = key;
-        var languageObject = {
-            name: language,
-            percentage: ((languages[key] / totalLanguages) * 100).toFixed(1)
-        };
-        totalLanguagesRounded+=Number(languageObject.percentage);
-        languagesList.push(languageObject);
-    });
-
-    if(totalLanguagesRounded > 100)
-    {
-        languagesList[0].percentage -= (totalLanguagesRounded - 100);
-    }
-
-    return languagesList
-}
-
 function GetLanguageColor(language) {
     if(language in colors)
     {
@@ -86,6 +43,15 @@ $(document).ready(function() {
     	}
     });
 
+    $.ajax({
+        url: 'data/projectsLanguages.json',
+        dataType: 'json',
+        async: false, // Make the request synchronous
+        success: function(data) {
+            languagesList = data;
+        }
+    });
+
     var projectBlockId = 0;
     projects.forEach(function(project) {
         
@@ -93,8 +59,7 @@ $(document).ready(function() {
         var repoUrl = project["url"];
         var previewArray = project["preview"];
         var description = project["description"];
-
-        languagesList = GetLanguagesList(LinkToAPI(repoUrl));
+        var languages = languagesList[repoUrl];
 
        var Block = "";
 
@@ -120,20 +85,20 @@ $(document).ready(function() {
                                         <h2 class= \"LanguagesTitle\">Languages</h2>\
                                         <div class= \"LanguagesBar\">\
                                             <span data-view-component= \"true\" class= \"Progress\">");
-                                            languagesList.forEach(function(language) {
-                                                Block +=("<span style=\"background-color:"+GetLanguageColor(language.name)+"!important; width: "+language.percentage+"%;\" class=\"Progress-item\"></span>");    
+                                            languages.forEach(function(language) {
+                                                Block +=("<span style=\"background-color:"+GetLanguageColor(language["name"])+"!important; width: "+language["percentage"]+"%;\" class=\"Progress-item\"></span>");    
                                             })
         Block += ("                  </span>\
                                         </div>\
                                         <ul class = \"LanguagesList\">");
-                                        languagesList.forEach(function(language) {
+                                        languages.forEach(function(language) {
                                             Block +=("<li>\
                                                         <a class=\"Language\">\
-                                                        <svg style=\"color:"+GetLanguageColor(language.name)+";\"  height=\"16\" width=\"16\"  class=\"LanguageDot\">\
+                                                        <svg style=\"color:"+GetLanguageColor(language["name"])+";\"  height=\"16\" width=\"16\"  class=\"LanguageDot\">\
 										                    <path d=\"M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z\"></path>\
 									                    </svg>\
-                                                        <span class=\"LanguageName\">"+language.name+"</span>\
-                                                        <span class=\"LanguagePercentage\">"+language.percentage+"%</span>\
+                                                        <span class=\"LanguageName\">"+language["name"]+"</span>\
+                                                        <span class=\"LanguagePercentage\">"+language["percentage"]+"%</span>\
                                                         </a>\
                                                     </li>");
                                         })
