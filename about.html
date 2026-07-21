@@ -24,7 +24,7 @@
 	<header>
 		
 		<div class="navigation">
-			<img class="NavIcon" src="https://avatars.githubusercontent.com/u/74106176?v=4"/>
+			<img class="NavIcon" src="https://avatars.githubusercontent.com/u/74106176"/>
 			<div class="NavText">
 				<h1>Mathieu Robion</h1>
 				<h2>Motisma479</h2>
@@ -52,7 +52,7 @@
    <svg
       width="100%"
       viewBox="0 0 200 160"
-      style="background: #f1f1f1;"
+      style="background: var(--back-color);"
       >
 
       <defs>
@@ -61,6 +61,7 @@
                 --main-color: #000000; /* Define your color once here */
                 --arrow-color: #000000;
                 --title-color: #d17676;
+                --back-color: #ffffff;
             }
             #root
             {
@@ -93,23 +94,32 @@
             y2="0"
             gradientUnits="objectBoundingBox"/>
       </defs>
-
+      
       <g id="root">
          <g id="edu" transform="translate(-5,10)">
-
+            
             <g id="link_Bac_GP" transform="translate(0,10)">
+               <mask id="link_Bac_mask" maskUnits="userSpaceOnUse">
+                  <circle cx="0" cy="0" r="100%" fill="white"/>
+                  <circle cx="0" cy="0" r="2.5" fill="black" />
+                  <circle cx="0" cy="40" r="2.5" fill="black" />
+               </mask>
                <path
                   style="fill:none;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-                  d="M 0,0 V 25"/>
+                  d="M 0,0 V 40" mask="url(#link_Bac_mask)"/>
             </g>
 
-            <g id="link_last_future" transform="translate(0,35) rotate(90)">
-               <rect x="0" y="0" width="20" height="0.0001" stroke="url(#linearGradient20)" style="fill: none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"/> 
+            <g id="link_last_future" transform="translate(0,50) rotate(90)">
+               <mask id="link_last_future_mask" maskUnits="userSpaceOnUse">
+                  <circle cx="0" cy="0" r="100%" fill="white"/>
+                  <circle cx="0" cy="0" r="2.5" fill="black" />
+               </mask>
+               <rect x="0" y="0" width="20" height="0.0001" stroke="url(#linearGradient20)" style="fill: none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" mask="url(#link_last_future_mask)"/> 
             </g>
 
             <g id="Entry_Bac" transform="translate(0,10)">
                <ellipse
-                  style="fill:#ffffff;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  style="fill:var(--back-color);stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
                   cx="0" cy="0" rx="2" ry="2"/>
                <path
                   style="fill:none;fill-opacity:1;stroke:var(--arrow-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -134,9 +144,9 @@
                </g>
             </g>
       
-            <g id="Entry_GP" transform="translate(0,35)">
+            <g id="Entry_GP" transform="translate(0,50)">
                <ellipse
-                  style="fill:#ffffff;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  style="fill:var(--back-color);stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
                   cx="0" cy="0" rx="2" ry="2"/>
                <path
                   style="fill:none;fill-opacity:1;stroke:var(--arrow-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -164,9 +174,29 @@
          </g>
 
          <g id="pro" transform="translate(5,10)">
-            <g id="Entry" transform="translate(0,10)">
+
+            <g id="link_pro_1" transform="translate(0,20)">
+               <mask id="link_pro_1_mask" maskUnits="userSpaceOnUse">
+                  <circle cx="0" cy="0" r="100%" fill="white"/>
+                  <circle cx="0" cy="0" r="2.5" fill="black" />
+                  <circle cx="0" cy="25" r="2.5" fill="black" />
+               </mask>
+               <path
+                  style="fill:none;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  d="M 0,0 V 25" mask="url(#link_pro_1_mask)"/>
+            </g>
+
+            <g id="link_last_future_pro" transform="translate(0,45) rotate(90)">
+               <mask id="link_last_future_pro_mask" maskUnits="userSpaceOnUse">
+                  <circle cx="0" cy="0" r="100%" fill="white"/>
+                  <circle cx="0" cy="0" r="2.5" fill="black" />
+               </mask>
+               <rect x="0" y="0" width="25" height="0.0001" stroke="url(#linearGradient20)" style="fill: none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"  mask="url(#link_last_future_pro_mask)"/> 
+            </g>
+
+            <g id="Entry_RND" transform="translate(0,20)">
                <ellipse
-                  style="fill:#ffffff;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  style="fill:var(--back-color);stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
                   cx="0" cy="0" rx="2" ry="2"/>
                <path
                   style="fill:none;fill-opacity:1;stroke:var(--arrow-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -175,75 +205,50 @@
                   <text
                      xml:space="preserve"
                      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:var(--title-color);fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="0">Title</text>
+                     x="0" y="0">R&D Internship</text>
                   <text
                      xml:space="preserve"
                      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="4">2022 - 2024 • France</text>
+                     x="0" y="5">02/2025 - 05/2025 • France</text>
                   <text
                      xml:space="preserve"
                      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="8">
-                     <tspan x="0" dy="0">A quick description</tspan><tspan x="0" dy="4">can be on many line</tspan>
+                     x="0" y="9">
+                     <tspan x="0" dy="0">Using the MetaHuman plugin</tspan>
+                     <tspan x="0" dy="4">to transcribe emotions</tspan>
                   </text>
                </g>
             </g>
       
-            <g id="Entry" transform="translate(0,35)">
+            <g id="Entry_BioImaging" transform="translate(0,45)">
                <ellipse
-                  style="fill:#ffffff;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  style="fill:var(--back-color);stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
                   cx="0" cy="0" rx="2" ry="2"/>
                <path
                   style="fill:none;fill-opacity:1;stroke:var(--arrow-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
                   d="M 7,-3 5,0 7,3"/>
-               <g id="paragraph" transform="translate(10,-4)">
+               <g id="paragraph" transform="translate(10,-7)">
                   <text
                      xml:space="preserve"
                      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:var(--title-color);fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="0">Title</text>
+                     x="0" y="0"> 
+                     <tspan x="0" dy="0">Software developer</tspan>
+                     <tspan x="0" dy="4.5">Apprenticeship</tspan>
+                  </text>
                   <text
                      xml:space="preserve"
                      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="4">2022 - 2024 • France</text>
+                     x="0" y="9.5">07/2026 - 08/2027 • France</text>
                   <text
                      xml:space="preserve"
                      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="8">
-                     <tspan x="0" dy="0">A quick description</tspan><tspan x="0" dy="4">can be on many line</tspan>
+                     x="0" y="13.5">
+                     <tspan x="0" dy="0">TODO</tspan>
+                     <tspan x="0" dy="4">TODO</tspan>
                   </text>
                </g>
             </g>
 
-            <g id="Entry" transform="translate(0,135)">
-               <ellipse
-                  style="fill:#ffffff;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-                  cx="0" cy="0" rx="2" ry="2"/>
-               <path
-                  style="fill:none;fill-opacity:1;stroke:var(--arrow-color);stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-                  d="M 7,-3 5,0 7,3"/>
-               <g id="paragraph" transform="translate(10,-4)">
-                  <text
-                     xml:space="preserve"
-                     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:var(--title-color);fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="0">Title</text>
-                  <text
-                     xml:space="preserve"
-                     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="4">2022 - 2024 • France</text>
-                  <text
-                     xml:space="preserve"
-                     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833"
-                     x="0" y="8">
-                     <tspan x="0" dy="0">A quick description</tspan><tspan x="0" dy="4">can be on many line</tspan>
-                  </text>
-               </g>
-            </g>
-
-            <g id="link" transform="translate(0,10)">
-               <path
-                  style="fill:none;fill-opacity:1;stroke:var(--main-color);stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-                  d="M 0,0 V 25"/>
-            </g>
          </g>
       </g>
    </svg>
