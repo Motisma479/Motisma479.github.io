@@ -89,13 +89,12 @@
 			</a>
 		</div>
 	</main>
-	
 </body>
 <script>
 	const params = new URLSearchParams(window.location.search);
 	const urlToExecute = params.get("url");
 	document.getElementById("backup").href = urlToExecute;
 	console.log();
-	// window.location.href = urlToExecute;
+	window.location.href = urlToExecute;
 </script>
 </html>
