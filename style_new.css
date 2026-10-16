@@ -1,0 +1,274 @@
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+html,
+body
+{
+    margin: 0;
+	font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2d31;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+main
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes gradientMove {
+    from {
+        background-position: 100% 48%;
+    }
+    to {
+        background-position: 48% 18%;
+    }
+}
+#landing
+{
+    background: #AA8ED6;
+    background: linear-gradient(180deg, #1A1524 48%, #7C3AED 100%);
+    background-size: 100% 200%;
+    flex: 1;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientMove 6s ease-in-out infinite alternate;
+}
+/* Center landing block */
+#centerBlock
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    gap:2rem;
+}
+
+#centerBlock::before 
+{
+    content: "";
+    position: absolute;
+    inset: -2rem;
+    background: #000;
+    filter: blur(30px);
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+#titlePart
+{
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+    gap:1rem;
+}
+#title
+{
+    display: flex;
+    flex-direction: column;
+}
+#title h1
+{
+    color:#ffffff;
+	font-size: 4rem;
+    margin: 0;
+}
+#title h2
+{
+    color:#cccccc;
+	font-size: 3rem;
+    margin: 0;
+}
+
+#ghLogo
+{
+	/* height: 50%; */
+	border-radius: 50%;
+	max-width: 8rem;
+	object-fit: contain;
+}
+
+#buttonPart
+{
+	display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    width: max-content;
+    gap: 1rem;
+}
+
+.button
+{
+	font-size: 1.2rem;
+	cursor: pointer;
+	padding: 0.65rem 1.5rem;
+	border-radius: 10px;
+	text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+
+    transition: transform 0.1s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulsate {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.btPrimary
+{
+    background-color: #AA8ED6;
+    color: #31253f;
+    border: 2px solid #bed68e;
+    transition: transform 2s ease-in-out;
+    animation: pulsate 2s ease-in-out infinite;
+}
+
+.btPrimary:hover
+{
+    animation: none;
+    transform: scale(1.05);
+}
+
+.btSecondary
+{
+    background-color: #31253f;
+    color: #AA8ED6;
+    border: 2px solid #AA8ED6;
+    transition: transform 0.1s ease;
+}
+
+.btSecondary:hover
+{
+    background-color: #453557;
+}
+
+/* Footer */
+.footer
+{
+    background-color: #17131F;
+    color: #F4F0FA;
+    border-top: 1px solid #392B4A;
+    padding: 20px 8%;
+}
+
+.footer-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo
+{
+    color: #F4F0FA;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo img
+{
+    border-radius: 50%;
+    object-fit: contain;
+    max-width: 4rem;
+}
+
+.footer-logo-title
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-title p
+{
+    margin: 0;
+}
+
+.footer-logo-title span
+{
+    color: #A78BFA;
+}
+
+.footer-links
+{
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a
+{
+    color: #B9AEC9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover
+{
+    color: #A78BFA;
+}
+
+.footer-copyright
+{
+    color: #8F849D;
+    font-size: 0.85rem;
+}
+
+.footer-copyright p
+{
+    margin: 0;
+}
+
+
+@media (max-width: 600px)
+{
+    .footer-content
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
